@@ -1,0 +1,35 @@
+.resBtn {
+    display: flex;
+    margin: 0 3% 0 auto;
+}
+
+.resBtn>button {
+    margin-right: 40px;
+    font-size: 16px;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.resBtn>p {
+    margin-right: 40px;
+    font-size: 16px;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.resBtn>div {
+    margin-right: 40px;
+    font-size: 16px;
+    align-items: center;
+    font-size: 2rem;
+}
+
+@media (max-width : 900px) {
+    .resBtn {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
