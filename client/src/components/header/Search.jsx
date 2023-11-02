@@ -66,7 +66,7 @@ export default function Search() {
     }
 
     const close = () =>{
-        setText('')
+        setText("")
         setOpen(true)
     }
 
@@ -74,19 +74,19 @@ export default function Search() {
 
         <SearchContainer style={{ display: 'flex' }}>
             <InputSearchBase placeholder='search for products, brands, more'
-                onChange={(e) => { gettext(e.target.value) }} />
+                onChange={(e) => gettext(e.target.value)} />
             <SearcticonWrapper>
                 <SearchIcon />
             </SearcticonWrapper>
 
             {
-                open && <ListWrapper >
+                text && <ListWrapper >
                     {
                         products.filter(products => products.title.longTitle.toLowerCase().includes(text.toLowerCase())).map(products => (
                              <ListItem style={{ color: 'black' }}>
-                                    <Link style={{ textDecoration: 'none', color: ' black' }}
+                                    <Link style={{ textDecoration: 'none', color: ' black'}}
                                         to={`/product/${products.id}`}
-                                        onclick={()=>close}
+                                        onClick={()=>close()}
                                         
                                     >
                                         {products.title.longTitle}

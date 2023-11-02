@@ -6,7 +6,7 @@ export const userSignup = async (req, res) => {
 
         const exist = await User.findOne({ username: req.body.username });
         if (exist) {
-            res.status(401).json({
+            return res.status(401).json({
                 success: false,
                 message: "user already exist"
             })
@@ -38,7 +38,7 @@ export const userLogin = async (req, res) => {
             res.status(200).json({
                 success: true,
                 data: userexist,
-                message: `${username} login successfull`
+                message: `${username} login successfully`
             })
         }
         else {
